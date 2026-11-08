@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+output/
+build/
+dist/
+
+# Local reverse engineering inputs and proprietary installation files
+code/
+dnSpy-net-win64/
+rea/
+*.zip
+*.dll
+*.exe
+CalIO_Architecture_and_API_Guide.md
+.env
+.env.*

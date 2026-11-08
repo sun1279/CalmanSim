@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colorlab-calman-py"
+version = "0.1.0"
+description = "Local SDR measurement workbench for CA410 and Murideo SIX-G"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24,<3", "pyserial>=3.5,<4", "PySide6-Essentials>=6.6,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+analysis = ["pefile>=2023", "capstone>=5,<6"]
+
+[project.scripts]
+colorlab = "calman_py.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["calman_py*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
